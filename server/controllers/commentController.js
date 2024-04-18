@@ -13,6 +13,8 @@ exports.createComment = catchAsync(async (req, res, next) => {
     user: req.body.user
   };
 
+  
+
   const newComment = await Comment.create(createdComment);
   const newObj = newComment.toObject();
 
